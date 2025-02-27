@@ -4,7 +4,7 @@
   <form [formGroup]="ratesForm">
     <mat-form-field class="w-100">
       <mat-label>Nombre</mat-label>
-      <input matInput type="text" formControlName="name" />
+      <input minlength="3" matInput type="text" formControlName="name" />
       <mat-error *ngIf="ratesForm.get('name')?.hasError('required')">
         Este campo es obligatorio.
       </mat-error>
